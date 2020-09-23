@@ -9,46 +9,47 @@ const { icon, innerText } = knobData;
 
 const buttonClicked = e => {
 	e.preventDefault();
+	
 	alert("Hello");
 };
 
 export const basicButton = () => (
-	<Button>{text(innerText.label, "Primary", innerText.group)}</Button>
+	<Button primary large>{text(innerText.label, "Primary", innerText.group)}</Button>
 );
 export const secondaryButton = () => (
-	<Button variant="secondary">
+	<Button secondary large>
 		{text(innerText.label, "Secondary", innerText.group)}
 	</Button>
 );
 export const tertiaryButton = () => (
-	<Button variant="tertiary">
+	<Button tertiary large>
 		{text(innerText.label, "Tertiary", innerText.group)}
 	</Button>
 );
 export const quartiaryButton = () => (
-	<Button variant="quartiary">
-		{text(innerText.label, "quartiary", innerText.group)}
+	<Button quartiary large>
+		{text(innerText.label, "uartiary", innerText.group)}
 	</Button>
 );
 
 export const fifthButton = () => (
-	<Button variant="fifth">
-		{text(innerText.label, "fifth", innerText.group)}
+	<Button fifth large>
+		{text(innerText.label, "Fifth", innerText.group)}
 	</Button>
 );
 
 export const iconButton = () => (
-	<Button icon={select(icon.label, icon.options, icon.default, icon.group)}>
-		{text(innerText.label, "Icon button", innerText.group)}
+	<Button primary large icon={select(icon.label, icon.options, icon.default, icon.group)}>
+		{text(innerText.label, "Icon", innerText.group)}
 	</Button>
 );
 export const functionButton = () => (
-	<Button onClick={buttonClicked}>
-		{text(innerText.label, "Function button", innerText.group)}
+	<Button primary large onClick={buttonClicked}>
+		{text(innerText.label, "Function", innerText.group)}
 	</Button>
 );
 export const linkedButton = () => (
-	<Button href="/route">
+	<Button primary href="/route">
 		{text(innerText.label, "Link button", innerText.group)}
 	</Button>
 );
@@ -57,7 +58,7 @@ export const linkedButton = () => (
 const parameters= {
     design: {
       type: 'figma',
-	  url: "https://www.figma.com/file/AdLCMrcsetwLwtPci90fdp/Admin-Manager?node-id=0%3A1"
+	  url: "https://www.figma.com/file/AdLCMrcsetwLwtPci90fdp/Admin-Manager?node-id=57%3A2"
     }
   }
 
@@ -81,9 +82,13 @@ secondaryButton.story = {
 	parameters
   }
 
+  fifthButton.story = {
+	name: 'Fifth - Button',
+	parameters
+  }
   
 export default {
 	component: Button,
-	decorators: [withKnobs],
+	decorators: [withKnobs, withDesign],
 	title: "Atoms|Button"
 };

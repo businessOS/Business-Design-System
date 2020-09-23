@@ -1,0 +1,7 @@
+{
+	"innerText": {
+		"label": "Input text",
+		"default": "Input text",
+		"group": "InputText"
+	}
+}

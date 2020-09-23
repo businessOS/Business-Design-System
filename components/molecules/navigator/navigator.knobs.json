@@ -1,0 +1,38 @@
+{
+  "innerText": {
+    "label": "Button text",
+    "default": "Button text",
+    "group": "text"
+  },
+  "routes": [
+    {
+      "path": "/",
+      "label": "Home",
+      "exact": true,
+      "icon": "home",
+      "sidebar": "() => <div>sidebar home!</div>",
+      "main": "() => <h2>main Home</h2>"
+    },
+    {
+      "path": "/stock",
+      "label": "Stock",
+      "icon": "layer-group",
+      "sidebar": "() => <div>Stock!</div>",
+      "main": "() => <h2>Stock</h2>"
+    },
+    {
+      "path": "/account",
+      "label": "Pending Accounts",
+      "icon": "file-invoice-dollar",
+      "sidebar": "() => <div>Pending Accounts!</div>",
+      "main": "() => <h2>Pending Accounts</h2>"
+    },
+    {
+      "path": "/Debtspay",
+      "label": "Debts to pay",
+      "icon": "credit-card",
+      "sidebar": "() => <div>Debts to pay</div>",
+      "main": "() => <h2>Debts to pay</h2>"
+    }
+  ]
+}

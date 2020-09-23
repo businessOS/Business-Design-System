@@ -1,73 +1,80 @@
-import styled from "styled-components";
-
-const buttonBackground = (props, typeColor) => {
-	// Fallback value if we can't get access to props
-	if (!props || !props.theme || !props.theme.primary) return "#00FFFF";
-	// If no variant is specified, return the primary colour in our theme
-	if (!props.variant) return props.theme.primary;
-
-	// Dynamically determine the background colour based on props
-	let colour;
-	let textColour;
-	let textBorder;
-	switch (props.variant) {
-		case "primary":
-			colour = props.theme.primary;
-			textBorder = colour;
-			textColour = props.theme.white
-			break;
-		case "secondary":
-			colour = props.theme.secondary;
-			textColour = props.theme.black100;
-			textBorder = colour;
-			break;
-		case "tertiary":
-			colour = props.theme.tertiary;
-			textColour= props.theme.white;
-			textBorder = colour;
-			break;
-		case "quartiary":
-			colour = props.theme.quartiary;
-			textColour= props.theme.quartiary100;
-			textBorder = textColour;
-			break;
-		case "fifth":
-			colour = props.theme.fifth;
-			textColour= props.theme.black;
-			textBorder = colour;
-			break;
-		default:
-			colour = props.theme.primary;
-			textColour = props.theme.black;
-			textBorder = colour;
-			break;
-	}
-
-	return typeColor === 1 ? colour : typeColor === 2 ? textColour : textBorder;
-};
+import styled, { css } from "styled-components";
 
 const StyledButton = styled.button`
 	align-items: center;
 	display: inline-flex;
-	padding: 16px;
-	background-color: ${props => buttonBackground(props, 1)};
-	border: 1px solid ${props => buttonBackground(props, 3)} ;
+	justify-content: center;
+	padding: 10px 18px;
+	
 	border-radius: 6px;
 	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-	color: ${props => buttonBackground(props, 2)};
+
 	cursor: pointer;
-	font-weight: 700;
+	font-weight: regular;
 	line-height: 1;
 	outline: none;
 	text-decoration: none;
+	text-align: center;
 	max-height: 50px;
-	transition: all 0.5s ease;
+	transition: all 0.3s ease;
 	white-space: nowrap;
-	margin : 16px;
+	margin : 6px;
+
 	.button__icon {
 		display: inline-block;
-		margin-right: 6px;
+		margin-right: 5px;
 	}
+
+    &:active {
+	   box-shadow: 0 0 0 transparent;
+    }
+
+	${(props) =>
+    props.large &&
+    css`
+      width: 150px;
+    `}
+
+	${(props) =>
+    props.primary &&
+    css`
+      background-color: ${props.theme.primary};
+      border: 1px solid ${props.theme.primary};
+      color: ${props.theme.white};
+    `}
+
+	${(props) =>
+    props.secondary &&
+    css`
+      background-color: ${props.theme.secondary};
+      border: 1px solid ${props.theme.secondary};
+      color: ${props.theme.black100};
+    `}
+
+	${(props) =>
+    props.tertiary &&
+    css`
+      background-color: ${props.theme.tertiary};
+      border: 1px solid ${props.theme.black};
+      color: ${props.theme.white};
+    `}
+	
+	${(props) =>
+    props.quartiary &&
+    css`
+      background-color: ${props.theme.quartiary};
+      border: 1px solid ${props.theme.quartiary100};
+      color: ${props.theme.quartiary100};
+    `}
+
+	${(props) =>
+    props.fifth &&
+    css`
+      background-color: ${props.theme.fifth};
+      border: 1px solid ${props.theme.fifth};
+      color: ${props.theme.black};
+    `}
+	
 `;
 
 export const StyledLinkButton = styled(StyledButton).attrs({ as: "a" })``;

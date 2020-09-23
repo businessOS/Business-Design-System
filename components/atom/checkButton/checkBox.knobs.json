@@ -1,0 +1,23 @@
+{
+	"innerText": {
+		"label": "CheckBox text",
+		"default": "Business",
+		"group": "Check"
+	},
+	"size" :{
+		"small": "small",
+		"large": "large"
+	},
+	"icon": {
+		"label": "icon",
+		"options": {
+			"bag": "bag",
+			"cart": "cart",
+			"plus": "plus",
+			"user": "user",
+			"x": "x"
+		},
+		"default": "bag",
+		"group": "images"
+	}
+}

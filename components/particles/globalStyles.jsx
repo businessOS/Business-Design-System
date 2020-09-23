@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	html {
-		color: black;
+	  color: black;
 	  font-family: Roboto, Oxygen, "Helvetica Neue", sans-serif;
 		font-size: 62.5%;
 		/* BETTER FONT SMOOTHING - https://gist.github.com/hsleonis/55712b0eafc9b25f1944 */
@@ -30,6 +30,11 @@ const GlobalStyle = createGlobalStyle`
 		box-sizing: border-box;
 	}
 
+    * {
+		padding: 0;
+		margin: 0;
+	}
+	
 	*, *:before, *:after {
 		box-sizing: inherit;
 	}
@@ -41,7 +46,7 @@ const GlobalStyle = createGlobalStyle`
 
 	p {
 		a {
-			color: ${props => props.theme.primary};
+			color: ${(props) => props.theme.primary};
 
 			&:active,
 			&:focus,
@@ -53,7 +58,7 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		overflow-y: scroll;
-		background-color: ${props => props.theme.white};
+		background-color: ${(props) => props.theme.white};
 		font-size: 1.6rem;
 		line-height: 1.5;
 		scroll-behavior: smooth;
@@ -108,17 +113,12 @@ const GlobalStyle = createGlobalStyle`
 
 	h1, h2, h3, h4, h5, h6 {
 		line-height: 1.25;
-		margin: 16px 0;
-
 		font-weight: 700;
 		text-transform: capitalize;
 	}
 
 	h1,
 	.h1 {
-		margin-bottom: 24px;
-		margin-top: 24px;
-
 		font-size: 43px;
 		font-weight: 700;
 		line-height: 1.1;
@@ -148,6 +148,6 @@ const GlobalStyle = createGlobalStyle`
 	.h6 {
 		font-size: 16px;
 	}
-` ;
+`;
 
 export default GlobalStyle;

@@ -1,0 +1,54 @@
+.app {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  outline: transparent solid 1px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.list2 {
+  border: 0px solid #d9dddd;
+  margin-top: 5px;
+}
+
+.list2 .listItem,
+.active {
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  font-size: 18px;
+  padding: 8px 8px;
+
+  border-radius: 8px;
+}
+.list2 .listItem,
+.active {
+  background-color: #2a2d56;
+  color: #ffffff;
+}
+
+.list2 .active {
+  background-color: #888cb4;
+  color: #ffffff;
+}
+
+.list2 .listItem,
+.active span {
+  color: #888cb4;
+}
+
+.list2::-webkit-scrollbar {
+  width: 14px; /* width of the entire scrollbar */
+}
+.list2::-webkit-scrollbar-track {
+  background: #16192c; /* color of the tracking area */
+}
+.list2::-webkit-scrollbar-thumb {
+  background-color: #c0c0c0; /* color of the scroll thumb */
+  border-radius: 6px; /* roundness of the scroll thumb */
+  border: 3px solid #16192c; /* creates padding around scroll thumb */
+}
