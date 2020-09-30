@@ -4,7 +4,6 @@ import { withDesign } from "storybook-addon-designs";
 
 import ListCard from "./listCard";
 import image from "../../../assets/images/bruno.jpg";
-import "./list2.css";
 
 //We’ll use this function inside our loadMoreItems implementation.
 const getUrl = (cant, start) =>

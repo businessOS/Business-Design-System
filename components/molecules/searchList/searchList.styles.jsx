@@ -90,7 +90,7 @@ const StyledSearchList = styled.div`
     &:hover {
       background: ${(props) => props.theme.blue100};
       border: 1px solid ${(props) => props.theme.primary};
-      color: ${(props) => props.theme.primary};
+      color: ${(props) => props.theme.darkBlue};
     }
     cursor: pointer;
   }
@@ -117,37 +117,6 @@ const StyledSearchList = styled.div`
     position: relative;
     margin: 0px 4px;
     height: 80%;
-
-    .list4 {
-      position: relative;
-      top: 0px;
-      margin: 0px;
-    }
-
-    .list4 .active {
-      background-color: ${(props) => props.theme.blue900};
-      color: ${(props) => props.theme.darkBlue};
-    }
-
-    .list4 .listItem {
-      padding: 0 8px;
-      display: flex;
-      align-items: center;
-      background-color: #ffffff;
-      color: ${(props) => props.theme.darkBlue};
-    }
-
-    .list4::-webkit-scrollbar {
-      width: 14px; /* width of the entire scrollbar */
-    }
-    .list4::-webkit-scrollbar-track {
-      background: #ffffff; /* color of the tracking area */
-    }
-    .list4::-webkit-scrollbar-thumb {
-      background-color: #c0c0c0; /* color of the scroll thumb */
-      border-radius: 6px; /* roundness of the scroll thumb */
-      border: 3px solid #ffffff; /* creates padding around scroll thumb */
-    }
   }
 `;
 

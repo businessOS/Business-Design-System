@@ -1,11 +1,10 @@
-import React, { useState }  from "react";
+import React, { useState } from "react";
 import range from "lodash/range";
 
 import { withKnobs, select, text } from "@storybook/addon-knobs";
 import { withDesign } from "storybook-addon-designs";
 
 import List from "./list";
-import "./list.css";
 
 const items = range(1000).map((i) => <div>item #{i}</div>);
 

@@ -3,9 +3,16 @@ import { array, func, number } from "prop-types";
 import { FixedSizeList } from "react-window";
 
 import StyledList from "./list.styles";
-import "./list.css";
 
-const List = ({ rows, rowSize, rowGutterSize, className, selection, setSelection, ...props }) => {
+const List = ({
+  rows,
+  rowSize,
+  rowGutterSize,
+  className,
+  selection,
+  setSelection,
+  ...props
+}) => {
   // create a list ref, this ref is used to get at the method `scrollToItem`
   // https://react-window.now.sh/#/examples/list/scroll-to-item
   const listRef = useRef(null);
@@ -72,7 +79,7 @@ const List = ({ rows, rowSize, rowGutterSize, className, selection, setSelection
   }, [selection]);
 
   return (
-    <div className="app">
+    <StyledList {...props}>
       {/* Containing div to add a `tabIndex` and `onKeyDown` and `onBlur` events to */}
       <div
         className="container"
@@ -108,7 +115,7 @@ const List = ({ rows, rowSize, rowGutterSize, className, selection, setSelection
           }}
         </FixedSizeList>
       </div>
-    </div>
+    </StyledList>
   );
 };
 

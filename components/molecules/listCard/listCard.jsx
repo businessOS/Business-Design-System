@@ -4,7 +4,7 @@ import { func, number, node, string, array } from "prop-types";
 import StyledList from "./listCard.styles";
 import List from "../../atom/list/list";
 
-import "./list2.css";
+// import "./list2.css";
 
 const ListCard = ({
   title,
@@ -38,11 +38,13 @@ const ListCard = ({
           rows={rows}
           rowSize={rowSize}
           rowGutterSize={rowGutterSize}
-          className="list2"
+          className="list"
           width={props.width || 390}
           height={props.height || 180}
           selection={selection}
           setSelection={setSelection}
+          rowColor={"#2a2d56"}
+          activeRowColor={"#888cb4"}
         />
       </div>
     </StyledList>

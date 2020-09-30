@@ -86,10 +86,14 @@ const StyledList = styled.div`
   }
 
   .items {
+    position: relative;
     display: flex;
-    flex-flow: column;
+    flex-flow: column nowrap;
+    align-items: baseline;
+    justify-content: space-between;
     margin: 18px 0px;
-    height: 80%;
+    height: 90%;
+
     span {
       font-size: 18px;
       font-weight: 500;
